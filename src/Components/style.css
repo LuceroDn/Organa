@@ -8,29 +8,66 @@ body {
     height: 100vh;
 }
 
+
 /* Primer pantalla */
 
 .laboratoriaimg {
+    position: absolute;
     height: 15%;
     width: 35%;
     margin-top: 23%;
-    margin-left: 33%; 
+    margin-left: 33%;
 }
+
 
 /* Segunda Pantalla */
 
+
+/*----------*/
+
+.col {
+    display: block;
+    float: left;
+}
+
+.col:first-child {
+    margin-left: 0;
+}
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+    /* For IE 6/7 */
+}
+
+
+/*----------*/
+
+.homePage {
+    position: relative;
+}
+
 .side1 {
+    width: 50%;
+    text-align: center;
     background-color: #fff;
     height: 43rem;
-    margin-top: 0%;
-
 }
 
 .side2 {
+    width: 50%;
+    text-align: center;
     background-color: black;
-    float: right;
     height: 43rem;
-    margin-top: -52.15%;
 }
 
 .labimg {
@@ -40,24 +77,20 @@ body {
 }
 
 .blackL {
-   width: 30%;
-   display: inline-block;
-   margin-top: 35%;
-   margin-left: 35%;
+    width: 30%;
+    display: inline-block;
+    margin-top: 35%;
 }
 
 .whiteL {
     width: 30%;
     margin-top: 35%;
-    margin-left: 35%;
-
- }
+}
 
 .title {
     font-family: 'Bitter', serif;
     font-size: 60px;
     text-decoration: none;
-
 }
 
 hr {
@@ -80,25 +113,34 @@ hr {
     color: #fff;
 }
 
-
 .line {
     margin-right: 80%;
 }
+
+@media only screen and (max-width: 480px) {
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .side1,
+    .side2 {
+        width: 100%;
+    }
+}
+
 
 /* Tercer Pantalla */
 
 .navLx {
     background-color: #ffe420;
-    
-    
 }
-
 
 .codeQr {
     width: 35%;
     margin-top: -3%;
     margin-right: 20%;
- 
 }
 
 .imgLBlack {
@@ -109,10 +151,9 @@ hr {
 
 .x {
     width: 3%;
-  margin-left: 180%;
-  margin-top: 4%;
-
-} 
+    margin-left: 180%;
+    margin-top: 4%;
+}
 
 .flecha1 {
     width: 20%;
@@ -141,8 +182,8 @@ hr {
     font-family: 'Open Sans', serif;
     font-size: 30px;
     margin-top: -9%;
-
 }
+
 
 /* Cuarta Pantalla */
 
@@ -190,6 +231,7 @@ hr {
     margin-left: 41%;
     background-color: #fff;
 }
+
 .card4 {
     height: 25%;
     width: 17%;
@@ -203,7 +245,6 @@ hr {
     font-size: 20px;
     text-decoration: underline;
     margin-top: 4%;
-
 }
 
 .row {
