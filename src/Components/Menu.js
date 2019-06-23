@@ -3,6 +3,9 @@ import { fadeIn } from 'react-animations'
 import Radium, {StyleRoot} from 'radium';
 import ele from '../img/ele.png'
 import eleBlanca from '../img/ele_blanca.png'
+import { Link } from "react-router-dom"
+
+
 import './style.css';
 const styles = {
   fadeIn: {
@@ -10,7 +13,7 @@ const styles = {
     animationName: Radium.keyframes(fadeIn, 'fadeIn')
   }
 }
-export default class WelcomePage extends Component {
+export default class Menu extends Component {
   constructor() {
 		super();
 		this.state = {
@@ -23,7 +26,7 @@ export default class WelcomePage extends Component {
           });
     }
       componentDidMount=()=>{
-              setTimeout (()=>this.toggle(),2000)
+              setTimeout (()=>this.toggle(),1000)
           }
           
          
@@ -40,7 +43,7 @@ export default class WelcomePage extends Component {
 <div class=" section group">
     <div class="side1 col span_1_of_2">
         <div>
-        <img class="blackL " src={ele} alt=""></img>
+        <Link to="/scanner"> <img class="blackL " src={ele} alt=""></img></Link>
                 </div>
                 <div class="h1">
                     <h1 class="text-center"><span class="title">Asistencia</span><hr/><span class="subtitle">Código QR</span></h1>
@@ -48,7 +51,7 @@ export default class WelcomePage extends Component {
             </div>
             <div class="col span_1_of_2 side2">
                 <div >
-                    <img class="whiteL" src={eleBlanca} alt=""></img>
+                <Link to="/attendance">   <img class="whiteL" src={eleBlanca} alt=""></img></Link> 
                 </div>
                 <div class="h1">
                     <h1 class="text-center blackSide"><span class="title">Reporte</span><hr /><span class="subtitle">Estadistica</span></h1>

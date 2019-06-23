@@ -131,60 +131,6 @@ hr {
 }
 
 
-/* Tercer Pantalla */
-
-.navLx {
-    background-color: #ffe420;
-}
-
-.codeQr {
-    width: 35%;
-    margin-top: -3%;
-    margin-right: 20%;
-}
-
-.imgLBlack {
-    width: 15%;
-    margin-top: 3%;
-    margin-left: 4%;
-}
-
-.x {
-    width: 3%;
-    margin-left: 180%;
-    margin-top: 4%;
-}
-
-.flecha1 {
-    width: 20%;
-    height: 20%;
-}
-
-.flecha2 {
-    width: 20%;
-    height: 20%;
-    margin-top: 13%;
-}
-
-.titleAttend {
-    font-family: 'Open Sans', serif;
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.qr {
-    font-family: 'Open Sans', serif;
-    font-size: 20px;
-    margin-top: -1%;
-}
-
-.message {
-    font-family: 'Open Sans', serif;
-    font-size: 30px;
-    margin-top: -9%;
-}
-
-
 /* Cuarta Pantalla */
 
 .date {

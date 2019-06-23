@@ -1,0 +1,84 @@
+/* .camera {
+    width: 50%;
+    height: 50%;
+}
+ */
+
+
+/* .attendance-qr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 30%;
+    margin-top: 30%;
+} */
+
+
+/* Tercer Pantalla */
+
+.cameraStyle {
+    width: 30%;
+    margin-bottom: 10%;
+}
+
+.navLx {
+    background-color: #ffe420;
+}
+
+.codeQr {
+    width: 35%;
+    margin-top: -3%;
+    margin-right: 20%;
+}
+
+.imgLBlack {
+    width: 8%;
+    margin-top: 3%;
+    margin-left: 4%;
+}
+
+.x {
+    position: absolute;
+    width: 3%;
+    margin-left: 79%;
+    margin-top: 4%;
+}
+
+
+/* .flecha1 {
+    width: 20%;
+    height: 20%;
+} */
+
+.flecha2 {
+    width: 20%;
+    height: 20%;
+    margin-top: 13%;
+}
+
+.titleAttend {
+    font-family: 'Open Sans', serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.qr {
+    text-align: center;
+    font-family: 'Open Sans', serif;
+    font-size: 20px;
+    margin-top: -1%;
+    margin-bottom: 1rem;
+}
+
+.message {
+    font-family: 'Open Sans', serif;
+    font-size: 30px;
+    margin-top: -9%;
+    text-align: center;
+}
+
+.hour {
+    text-align: center;
+    position: relative;
+    padding: 1rem;
+}

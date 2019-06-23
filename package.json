@@ -1,13 +1,17 @@
 {
     "name": "organa",
-    "homepage": "https://nathalico.github.io/organa",
+    "homepage": "https://nathalico.github.io/organa/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "firebase": "^6.2.2",
+        "moment": "^2.24.0",
         "radium": "^0.25.2",
         "react": "^16.8.6",
         "react-animations": "^1.0.0",
         "react-dom": "^16.8.6",
+        "react-qr-reader": "^2.2.1",
+        "react-router-dom": "^5.0.1",
         "react-scripts": "3.0.1"
     },
     "scripts": {

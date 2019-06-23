@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Home from './Home';
+import Menu from './Menu';
 import Welcome from './Welcome';
 import './style.css';
 
@@ -8,7 +8,7 @@ export default class HomePage extends Component {
         return (
             <React.Fragment>
             <Welcome/>
-           <Home/>
+           <Menu/>
            </React.Fragment>
         )
     }
