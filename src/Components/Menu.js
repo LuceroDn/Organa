@@ -51,7 +51,7 @@ export default class Menu extends Component {
             </div>
             <div class="col span_1_of_2 side2">
                 <div >
-                <Link to="/attendance">   <img class="whiteL" src={eleBlanca} alt=""></img></Link> 
+                <Link to="/statistics">   <img class="whiteL" src={eleBlanca} alt=""></img></Link> 
                 </div>
                 <div class="h1">
                     <h1 class="text-center blackSide"><span class="title">Reporte</span><hr /><span class="subtitle">Estadistica</span></h1>

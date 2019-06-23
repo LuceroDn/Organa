@@ -27,11 +27,11 @@ export default class Scanner extends Component {
     componentDidMount() {
         let ref = firebase.database().ref('studentsList');
         ref.on("value", snapshot => {
-            listAll = this.snapshotToArray(snapshot);
+           // listAll = this.snapshotToArray(snapshot);
             this.setState({
-                studentsList: listAll
+                studentsList: snapshot.val()
             }, () => {
-                console.log(this.state.studentsList[0])
+               console.log(this.state.studentsList)
             })
         });
 
@@ -39,13 +39,13 @@ export default class Scanner extends Component {
     }
 
     attendanceListFromFirebase = () => {
-            let ref2 = firebase.database().ref('attendance');
-            ref2.on("value", snapshot => {
-                let attendanceListFromFirebase = this.snapshotToArray(snapshot);
+            let ref = firebase.database().ref('attendance');
+            ref.on("value", snapshot => {
+                //let attendanceListFromFirebase = this.snapshotToArray(snapshot);
                 this.setState({
-                    attendanceList: attendanceListFromFirebase
+                    attendanceList: snapshot.val()
                 }, () => {
-                    console.log(this.state.attendanceList)
+               
                 })
             })
         }
@@ -58,43 +58,55 @@ export default class Scanner extends Component {
         });
         return returnArr;
     }
-
+arriveTime=(data,attendance)=>{
+    
+    if(getHours<8){
+                   
+        firebase.database().ref('attendance').child(date).child(data).set({
+            name:attendance[0].name,
+            id:attendance[0].id,
+            status: "on Time"
+        });
+        
+    }else{
+        
+        firebase.database().ref('attendance').child(date).child(data).set({
+            name:attendance[0].name,
+            id:attendance[0].id,
+            status: "delay"
+        });
+       
+    }
+    this.setState({
+        result: "Bienvenida " + attendance[0].name,
+    })
+}
 
     handleScan = data => {
         let attendance;
+        let alreadyCheck ; 
         if (data) {
-            const student = this.state.studentsList[0].filter(item => item.name === data);
+            console.log(data)
+            const student = this.state.studentsList.students.filter(item => item.name === data);
             attendance = student;
             
             if (attendance.length < 1) {
                 this.setState({
                     result: "codigo incorrecto",
                 });
-            } else {
-                // let alreadyCheck;
-                // console.log(this.state.attendanceList[0])
-                // const repeat = this.state.attendanceList[0].filter(item => item.name === data);
-                // alreadyCheck = repeat;
-                // console.log(alreadyCheck)
-                if(getHours<8){
-                   
-                    firebase.database().ref('attendance').child(date).child(data).set({
-                        name:attendance[0].name,
-                        id:attendance[0].id,
-                        status: "on Time"
-                    });
-
-                }else{
-                    
-                    firebase.database().ref('attendance').child(date).child(data).set({
-                        name:attendance[0].name,
-                        id:attendance[0].id,
-                        status: "delay"
-                    });
-                }
-                this.setState({
-                    result: "Bienvenida " + attendance[0].name,
-                })
+            } else {  
+                let test;
+                test = this.state.attendanceList[`${date}`]
+                for (const prop in test){
+                    if (prop===data){
+                        console.log("repetida")
+                        this.setState({
+                            result: "Bienvenida de nuevo",
+                        });
+                    } else{
+                        this.arriveTime(data, attendance);
+                    }
+                } 
             }
         }
     }
