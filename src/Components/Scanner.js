@@ -20,9 +20,7 @@ export default class Scanner extends Component {
     state = {
         result: '',
         attendanceList: [],
-        student: {},
         studentsList: [],
-
     }
 
     //Get data listStudents from Firebase

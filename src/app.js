@@ -7,15 +7,25 @@ import Attendance from './Components/Attendance';
 import Menu from './Components/Menu';
 import { BrowserRouter, Route } from "react-router-dom";
 import './App.css'
+
 function App() {
-    return ( 
-    <BrowserRouter>
-     <Route exact path="/" component={HomePage} />
-     <Route path="/scanner" component={Scanner} />
-     <Route path="/attendance" component={Attendance} />
-     <Route path="/menu" component={Menu} />
-   </BrowserRouter>
-        
+    return ( <
+        BrowserRouter >
+        <
+        Route exact path = "/"
+        component = { HomePage }
+        /> <
+        Route path = "/scanner"
+        component = { Scanner }
+        /> <
+        Route path = "/attendance"
+        component = { Attendance }
+        /> <
+        Route path = "/menu"
+        component = { Menu }
+        /> <
+        /BrowserRouter>
+
     );
 }
 

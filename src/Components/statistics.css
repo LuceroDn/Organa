@@ -1,0 +1,68 @@
+.date {
+    font-family: 'Open Sans', serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.card1 {
+    height: 23%;
+    width: 60%;
+    background-color: #fff;
+    margin-left: 20%;
+    margin-top: -2%;
+    margin-bottom: 2%;
+}
+
+.textCard {
+    font-family: 'Open Sans', serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 6%;
+}
+
+.attendance {
+    font-family: 'Open Sans', serif;
+    font-size: 50px;
+    margin-bottom: -6%;
+    margin-top: -2%;
+}
+
+.card2 {
+    height: 25%;
+    width: 21%;
+    margin-top: 4%;
+    margin: 0 2% 0 2%;
+    background-color: white;
+}
+
+.card3 {
+    height: 25%;
+    width: 17%;
+    margin-top: -13%;
+    margin-left: 41%;
+    background-color: #fff;
+}
+
+.card4 {
+    height: 25%;
+    width: 17%;
+    margin-top: -13.2%;
+    margin-left: 60%;
+    background-color: #fff;
+}
+
+.more {
+    font-family: 'Open Sans', serif;
+    font-size: 20px;
+    text-decoration: underline;
+    margin-top: 4%;
+}
+
+.row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /* margin-right: -15px; */
+    /* margin-left: -15px; */
+    justify-content: center;
+}
